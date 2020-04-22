@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#main-container{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+		}
+
+		#header{
+			display: flex;
+			justify-content: center;
+			height: 100px;
+		}
+		#title{
+			font-size: 50px;
+		}
+		#add-container{
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			flex-wrap: nowrap;
+		}
+		#add-input{
+			flex-basis: 30%;
+			height: 30px;
+		}
+		#add-button{
+			font-size: 20px;
+		}
+		#list-container{
+			margin-top: 30px;
+			display: flex;
+			justify-content: center;
+		}
+		#list{
+			list-style-type: none;
+			font-size: 23px;
+			margin:0px;
+			padding:0px;
+			flex-basis: 44%;
+		}
+		input.strike ~ span{
+			text-decoration: line-through;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div id="main-container">
+		<div id="header">
+			<div id="title">Todo List App</div>
+		</div>
+		<div id="add-container">
+			<input type="text" id="add-input"/>
+			<button id="add-button">Add item</button>
+		</div>
+		<div id="list-container">
+			<ul id="list"></ul>
+		</div>
+	</div>
+
+<template id="template">
+	<li>
+		<input type="checkbox">
+		<span></span>
+	</li>
+</template>
+<script src="todo.js"></script>
+</body>
+</html>
